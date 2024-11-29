@@ -57,3 +57,7 @@ __debug_bin*
 
 # make lint cache
 .cache/
+
+#
+vendor*
+Dockerfile-*
