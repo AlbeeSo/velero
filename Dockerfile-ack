@@ -24,7 +24,7 @@ COPY . /go/src/github.com/vmware-tanzu/velero
 WORKDIR /go/src/github.com/vmware-tanzu/velero
 
 RUN mkdir -p /output/bin 
-RUN env GOARCH=$(echo $TARGETPLATFORM | cut -f2 -d '/') CGO_ENABLED=0 GO111MODULE=on GOPROXY=proxy.golang.com.cn,direct \
+RUN env GOARCH=$(echo $TARGETPLATFORM | cut -f2 -d '/') CGO_ENABLED=0 GO111MODULE=on GOPROXY=direct \
 	go build -o /output/bin ./cmd/velero
 
 
